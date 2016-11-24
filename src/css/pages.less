@@ -4,7 +4,7 @@
 	position: relative;
 	margin: 40px 5px 80px 5px;
 	min-height: 450px;
-	background-color: #fff;
+	background-color: rgba(255,255,255,0.8);
 }
 
 .hp::after,
@@ -90,13 +90,20 @@
 
 .hp .separator-text {
 	display: inline-block;
-	background-color: #fff;
 	width: 50px;
 }
 
 .hp .separator-ruler {
 	margin: -16px auto 10px;
 	border-top: 1px solid #ddd;
+}
+
+.hp .jumbotron p, div.download p {
+	font-size: 14px;
+}
+
+input.form-control {
+	padding: 6px 6px;
 }
 
 /*
@@ -123,7 +130,7 @@ For those users the experience will be less intuitive.
 
 .hp .fallback form input:valid + span {
 	display: inline-block;
-	padding: 6px 12px;
+	padding: 6px 6px;
 	background-color: #5cb85c;
 	border-color: #4cae4c;
 	color: #fff;
@@ -131,6 +138,13 @@ For those users the experience will be less intuitive.
 
 .hp .fallback form label {
 	margin-bottom: 0;
+}
+
+.largegreen {
+	margin-top: 20px;
+	font-size: 120px;
+	text-align: center;
+	color: green;
 }
 
 /*// ------------------------------------------------------------------------------------------ Download */

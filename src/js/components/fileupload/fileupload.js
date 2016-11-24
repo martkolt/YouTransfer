@@ -92,7 +92,6 @@ function Fileupload(element) {
 						});
 					} else {
 						var file = response.bundle.files[0];
-						$(result.previewElement).find(DROPZONE_PREVIEW_DATALINK_SELECTOR).append('<a href="/download/' + file.id + '"><span class="glyphicon glyphicon-download-alt"></span> ' + file.id + '</a>');
 						component.bundle.files.push(file);
 					}
 				}
@@ -106,7 +105,7 @@ function Fileupload(element) {
 						component.$completedContainer
 								 .html(component.completeTemplate)
 								 .addClass(DROPZONE_UPLOAD_COMPLETE_CLASS);
-						$(DROPZONE_PREVIEW_TEMPLATE_SELECTOR).prepend('<div class="dz-preview-bundle"><span class="glyphicon glyphicon-download-alt"></span> <a href="/bundle/' + component.bundle.id + '/">Download all files as a zip archive (<span class="glyphicon glyphicon-compressed"></span>)</a></div>');
+						$(DROPZONE_PREVIEW_TEMPLATE_SELECTOR).prepend('<div class="dz-preview-bundle"><span class="glyphicon glyphicon-download-alt"></span> <a href="/bundle/' + component.bundle.id + '/">https://transfer.mediamonks.net/bundle/'+component.bundle.id+'/</a></div>');
 						component.$completedContainer
 								 .find('form')
 								 .append('<input type="hidden" name="bundle" value="' + component.bundle.id + '" />');

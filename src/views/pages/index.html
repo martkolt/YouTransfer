@@ -3,14 +3,14 @@
 {% block content %}
 <div class="hp jumbotron" id="hp">
 	{% include "title.html" %}
-	
+
 	{% if security.accessRights == 'restricted' and not user %}
 
 		{% include "login.html" %}
 
 	{% else %}
 
-		<div class="{{ "col-md-6" if isPostback or general.enableDownload else "col-md-12" }} dz-upload-container">
+		<div class="{{ "col-md-8" if isPostback or general.enableDownload else "col-md-12" }} dz-upload-container">
 			{%if isPostback %}
 
 				{% if success %}
@@ -34,11 +34,11 @@
 		</div>
 
 		{% if success %}
-		<div class="col-md-6 dz-completed-container">
+		<div class="col-md-4 dz-completed-container">
 
 			{%if isPostback %}
 
-				{% include "sendmail.html" %}
+				{% include "link.html" %}
 
 			{% elif general.enableDownload %}
 
